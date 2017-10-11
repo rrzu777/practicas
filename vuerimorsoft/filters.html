@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="main">
+
+		<button type="submit" v-on:click="getUsers" v-if="!lists.length">Listar</button>
+		
+
+		<ul v-else>
+		<input type="text" v-model="name">
+		<li v-for="item in searchUsers">{{ item.name.first}} {{ item.name.last}}</li></ul>
+
+	</div> 	
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+	<script type="text/javascript">
+		
+		new Vue ({
+			el: "#main",
+			data: {
+				lists: [],
+				name: "",
+			},
+			methods: {
+				getUsers: function(){
+					var urlUsers = 'https://randomuser.me/api/?results=10';
+					axios.get(urlUsers).then(response => {
+						this.lists = response.data.results
+					});
+				}
+			},
+			computed:{
+				searchUsers: function(){
+					return this.lists.filter((item) => item.name.first.includes(this.name))
+				}
+			}
+		});
+	</script>
+</body>
+</html>

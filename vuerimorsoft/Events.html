@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Events</title>
+</head>
+<body>
+	<div id="main">
+	<ul>
+	<form v-on:submit.prevent="addName">
+		<input type="text" v-model="name">
+		<li v-for="item in alcohol" v-text="item"></li>
+	</ul>
+	<button v-on:click="num += 1">{{num}}</button>
+	</form>
+		
+	</div>
+	<script src="js/vue.js"></script>
+	<script type="text/javascript">
+		new Vue ({
+			el: "#main",
+			data:{
+				alcohol: ["Ron","Cerveza","Whisky","Fernet"],
+				name:"",
+				num: 0,
+
+			},
+
+			methods: {
+				addName: function(){
+					this.alcohol.unshift(this.name);
+					this.alcohol.push(this.name);
+					this.name = "";
+								
+				}
+			}
+		});
+	</script>
+</body>
+</html>

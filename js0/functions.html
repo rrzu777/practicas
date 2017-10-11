@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>functions</title>
+</head>
+<body>
+	
+
+	<script>
+   let equipos = [
+    {
+      nombre : "FC Barcelona",
+      pais : "España",
+      ciudad : "Barcelona",
+      copas : "27",
+      elMasgrande(a){
+        return this.nombre;
+      }
+    },
+    {
+      nombre : "Real Madrid",
+      pais : "España",
+      ciudad : "Madrid",
+      copas : "19"
+    },
+    {
+      nombre : "Inter de Milan",
+      pais : "Italia",
+      ciudad : "Milan",
+      copas : "12"
+    },
+    {
+      nombre : "River Plate",
+      pais : "Argentina",
+      ciudad : "Buenos Aires",
+      copas : "17",
+      multi : function(a,b){
+        return a*b;
+      }
+    },
+    {
+      nombre : "Bayern Munich",
+      pais : "Alemania",
+      ciudad : "Munich",
+      copas : "25",
+      suma(a,b){
+        return a+b;
+      }
+    }
+    ];
+    console.log(equipos[0].elMasgrande());
+    console.log(equipos[3].multi(3,9));
+  console.log(equipos[4].suma(3,9));
+
+function restar(a){
+  return function(b){
+    return a - b;
+  }
+};
+console.log(restar(2)(13));
+
+
+let division = (function(a,b){
+  return a / b;
+})(20,3);
+
+console.log(division)
+
+let Bebida = function(tipo, presentacion){
+  this.tipo = tipo;
+  this.presentacion = presentacion;
+};
+let fernet = new Bebida("Branca", "0.75Lts");
+console.log(fernet);
+
+
+numbers = [3,2,7];
+let por = function(a,b,c){
+  return a * b * c;
+};
+
+let multi = por.apply(undefined,numbers);
+console.log(multi);
+let multi2 = por.call(undefined,3,4,7);
+console.log(multi2);
+
+  /*function mosaGonda(mosi, mo){
+  return mosi + mo;
+}
+let digalo =prompt("HABLA MO");
+let mor =prompt();
+let mochi = mosaGonda(digalo, mor);
+
+console.log(mochi)*/
+
+/*
+function numPor(a,b){
+  return a*b;
+}
+console.log(numPor(2,7));*/
+  </script>
+</body>
+</html>

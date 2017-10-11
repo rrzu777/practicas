@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>data</title>
+</head>
+<body>
+	
+
+	<script>
+    titulares = ["Ter Stegen","Alba","Pique","Umtiti","Semedo","Busquets","Iniesta","Paulinho","Dembele","Messi","Suarez"];
+    banqueta = ["Cillessen", "Vidal", "Deulofeu"];
+
+    let yo = {
+        nombre : "Roberto",
+        apellido : "Zamora",
+        DNI : "95296703",
+        Pais : "Argentina",
+        esHermano : true,
+        hermanos : ["Astrid", "Manuel"]
+    }
+    console.log(yo);
+
+    Object.prototype.gondaMosa = "DindaMo";
+    delete yo.esHermano;
+    console.log(yo)
+    console.log("gondaMosa" in yo)
+    console.log(yo.hasOwnProperty("gondaMosa"))
+
+    /*let iter2 = banqueta.keys();
+    console.log("Portero: ")
+    console.log(iter2.next());
+    console.log("Defensa: ")
+    iter2.value = "red";
+    console.log(iter2);*/
+
+  </script>
+</body>
+</html>

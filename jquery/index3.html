@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<p> LISTA 1</p>
+<ul>
+<li>hola</li>
+<li>qloq</li>
+<li>menol</li></ul>
+
+<p> LISTA 2</p>
+<ul>
+<li>RED</li>
+<li>BACK</li>
+<li>BLUE</li>
+</ul>
+	<button>DO IT</button>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("ul li:even").css("background-color","red");
+		});
+	});
+	
+
+</script>
+</body>
+</html>

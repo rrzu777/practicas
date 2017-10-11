@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VueJS</title>
+</head>
+<body>
+	
+	<div id="main">
+		<ul>	
+		<li v-for="item in alcohol" v-text="item"></li></ul>
+		<input type="text" v-model="info" v-on:keyup.enter="addName">
+		SE MUESTRa lo que escribes aca {{info}}
+	</div>
+
+
+
+	<script src="js/vue.js"></script>
+	<script type="text/javascript">
+		new Vue({
+			el: '#main',
+			data:{
+				alcohol	: ['Vino Tinto, Vino Blanco, Ron, Tequila, Fernet'],
+				info: ''
+			},
+			name: '',
+			methods: {
+				addName: function(){
+					this.alcohol.push(this.alcohol.name);
+					this.alcohol.name = '';
+					}
+			} 			
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style rel="stylesheet">
+		.caja1{
+			background-color: deeppink;
+			width: 400px;
+			height: 320px;
+			display: none;
+			line-height: 250px;
+			color: white;
+			padding: 4em
+		}
+		.caja1 span{
+			font-size: 25px;
+		}
+		#p1{
+			background-color: red;
+		}
+		#p2{
+			background-color: green;
+		}
+		#p3{background-color: beige;}
+		#p4{background-color: blue;}
+	</style>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<div class="caja1" value="nosex"><span>QUIERAME MO ;(</span></div>
+<div class="detalles"></div>
+
+
+
+<br>
+<button class="action">TE AMU</button>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".action").click(function(){
+		$(".caja1").slideDown("slow");
+});
+});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Directiva V-show</title>
+</head>
+<body>
+<div id="main">
+<div class="boletin">Suscribite a nuestro boletin</div>
+	<div>
+		<input type="text" v-model="email">
+	</div>
+	<div>
+		<button type="submit" v-show="email">Enviar</button>
+	</div>
+</div>
+	
+
+
+	<script src="js/vue.js"></script>
+	<script type="text/javascript">
+		new Vue ({
+			el: "#main",
+			data: {
+				email: "",
+			}
+		});
+	</script>
+</body>
+</html>

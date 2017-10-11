@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style rel="stylesheet">
+		.caja1{
+			background-color: red;
+			width: 100px;
+			height: 120px;
+		}
+		#p1{
+			background-color: red;
+		}
+		#p2{
+			background-color: green;
+		}
+		#p3{background-color: beige;}
+		#p4{background-color: blue;}
+	</style>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<div class="caja1" value="nosex"></div>
+<div class="detalles"></div>
+
+<p>parrafo1</p>
+<p id="p3">parrafo2</p>
+<p>parrafo3</p>
+<p>parrafo4</p>
+
+<br>
+<button class="action">Ver</button>
+<button class="cambiar">Ver parrafos</button>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".action").click(function(){
+		var txt = $(".caja1").attr("value");
+		$(".detalles").html(txt);
+		$(".caja1").attr("value","nueva")
+	});
+	$(".cambiar").click(function(){
+		$("p").attr("id",function(index){
+			return "p" + (index + 1);
+		});
+	})
+});
+	
+</script>
+</body>
+</html>

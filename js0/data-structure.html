@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>data</title>
+</head>
+<body>
+	
+
+	<script>
+    titulares = ["Ter Stegen","Alba","Pique","Umtiti","Semedo","Busquets","Iniesta","Paulinho","Dembele","Messi","Suarez"];
+    banqueta = ["Cillessen", "Vidal", "Deulofeu"];
+    console.log(banqueta);
+    banqueta.push("Digne", "Alcacer");
+    console.log(banqueta);
+    banqueta.unshift("Rafinha", "Vermaelen","Arda", "Andre Gomez");
+    console.log(banqueta);
+
+   
+    console.log(titulares.join("        "));
+     titulares.splice(1,0, 'Denis', 'hoal');
+    console.log(titulares);
+    let titulares2 = titulares.slice();
+    console.log(titulares2)
+    titulares2.splice(2,1);
+    console.log(titulares2);
+    console.log(titulares)
+    let arr = titulares.find( el => el.length < 5);
+    console.log(arr);
+  </script>
+</body>
+</html>

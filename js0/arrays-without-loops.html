@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>data</title>
+</head>
+<body>
+	
+
+	<script>
+   let equipos = [
+    {
+      nombre : "FC Barcelona",
+      pais : "España",
+      ciudad : "Barcelona",
+      copas : "27"
+    },
+    {
+      nombre : "Real Madrid",
+      pais : "España",
+      ciudad : "Madrid",
+      copas : "19"
+    },
+    {
+      nombre : "Inter de Milan",
+      pais : "Italia",
+      ciudad : "Milan",
+      copas : "12"
+    },
+    {
+      nombre : "River Plate",
+      pais : "Argentina",
+      ciudad : "Buenos Aires",
+      copas : "17"
+    },
+    {
+      nombre : "Bayern Munich",
+      pais : "Alemania",
+      ciudad : "Munich",
+      copas : "25"
+    }
+   ];
+   console.log(equipos[1].nombre, equipos[1].pais);
+    let newEquipos = equipos.map(equipo => equipo.pais);
+    let paises = equipos.filter(lugar => lugar.pais == "España");
+    let paisFrom = paises.map(name => name.nombre);
+    let numeros = [1,2,3,4,5,6,7,8,9,10];
+
+    let suma = numeros.reduce((a,b) => a + b);
+    console.log(suma);
+    let mayor = numeros.reduce((a,b) => a < b ? b : b);
+    console.log(mayor);
+    let promedio = numeros.reduce((a,b,i,arr) => {
+      b += a;
+      return i == arr.length -1 ? b / arr.length : b;
+    });
+    console.log(promedio);
+
+    let masCopas = equipos.reduce((a,b) => { 
+      if (a.copas > b.copas){ 
+        return{nombre : a.nombre, copas : a.copas}
+      }
+       else{
+       return{nombre : b.nombre, copas : b.copas}
+     };
+   });
+    console.log(masCopas);
+
+   // for (let i = 0; i < equipos.length; i++){
+   //  newEquipos.push(equipos[i].nombre);
+   // }
+   console.log(newEquipos);
+   console.log(paisFrom);
+  </script>
+</body>
+</html>

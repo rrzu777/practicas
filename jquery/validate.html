@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style rel="stylesheet">
+		.caja1{
+			background-color: red;
+			width: 100px;
+			height: 120px;
+		}
+		.normal{
+			background-color: aliceblue;
+			color:yellowgreen;
+		}
+		.p2{
+			color: red;
+		}
+		#p3{background-color: beige;}
+		#p4{background-color: blue;}
+
+	</style>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<div class="caja1" value="nosex"></div>
+<div class="detalles"></div>
+
+<p>parrafo1</p>
+<p id="p3">parrafo2</p>
+<p>parrafo3</p>
+<p>parrafo4</p>
+<input type="password" id="pass"><span id="mensaje">Ingrese una contraseña menor a 8 caracteres</span><br>
+<input type="password" id="confirmacion"> <span id="wanano"></span>
+<br>
+<button class="action">Ver</button>
+<button class="cambiar">Ver parrafos</button>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#pass").focusin(function(){
+		$(this).addClass("normal");
+	});
+	$("#pass").focusout(function(){
+		if($(this).val().length > 0 && $(this).val().length <= 3){
+		$("#mensaje").html("<span style='color:red'>Ingrese una contraseña mayor a 3 caracteres</span>");	
+	}
+	else if
+		($(this).val().length > 3 && $(this).val().length < 9){
+			$("#mensaje").html("<span style='color:yellowgreen'>GONDA</span>");
+	}
+	else if
+		($(this).val().length > 8) {
+			$("#mensaje").html("<span style='background-color:red;color:white'>TE AMOOOOO</span>");
+	}
+	
+	$("#confirmacion").focusout(function(){
+		if($(this).val().length >= 0 && $(this).val().length <=3){
+			$("#wanano").html("SUMALE CHE");
+		}else if($(this).val().length > 3 && $(this).val().length < 8){
+				if($("#pass").val() === $(this).val()){
+					$("#wanano").html("<strong>Las contraseñas coinciden</strong>");
+				}
+				else {
+									$("#wanano").html("NO COINCIDEN MIJO");}
+		}
+
+		else
+			$("#wanano").html("QUE TE DIJE? :S");
+
+
+			});
+
+	});
+})
+	
+</script>
+</body>
+</html>

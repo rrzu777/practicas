@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>template</title>
+</head>
+<body>
+	<div id="main">
+		<div class="hola">
+		<template v-if="!message">
+			<h3 class="hola"></h3>
+			<span>SI me lees es porque tienes que ingresar un texto abajo</span>
+	
+			</template>
+			<span v-else>presione enter para mandar su mensaje</span>
+			<input type="text" v-model="message">
+
+		</div>
+	</div>
+	<script src="js/vue.js"></script>
+	<script type="text/javascript">
+		
+		new Vue({
+			el:"#main",
+			data: {
+				message:""
+			}
+		});
+
+	</script>
+</body>
+</html>

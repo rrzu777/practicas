@@ -1,0 +1,182 @@
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 70px;
+}
+footer {
+  padding: 30px 0;
+}
+body a{
+   color:#333;
+}
+a.rayado{
+  text-decoration: underline;
+}
+
+#headr{
+    background-color: #fff;
+    border-width: 4px;
+    border-bottom-color: #ddd;
+    border-top-color: #ddd;
+  }
+.icono-menu{
+  background-color: #333;
+}
+.fondo-icono{
+  background-color: #eee;
+  border: 1px solid #333;
+
+}
+span.lista{
+  display: block;
+  font-size: 10px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: underline;
+    color: #222;
+    background: transparent;
+}
+
+img.logo{
+  width: 170px;
+  height: 70px;
+}
+span.texto-img {
+    line-height: 6em;
+}
+.separacion{
+  margin-top:30px;
+}
+
+#cap{
+  position: absolute;
+  display: block;
+  background-color: rgba(51, 51, 51, 0.81);
+  color: #fff;
+  top: 30px;
+  left: 33px;
+  padding: 1em;
+  border-radius: 2px;
+}
+.testimonial{
+    padding: 6em;
+    border: 4px solid #ddd;
+}
+#testimonio{
+ border: 4px solid #ddd;
+  background-color:white;
+}
+
+.work{
+  padding: 3.5em;
+  background-color: #eee;
+}
+
+.clear{
+  clear:both;
+}
+
+p.banner {
+    font-size: 1.5em;
+    margin: 30px 5px 5px 5px;
+}
+span#note{
+    margin: 10px 25px 30px 15px;
+    font-size: 0.9em;
+    display: block;
+}
+  
+.linea{
+  border-top:1px solid #ddd;
+}
+.linea-doble{
+  border-top:4px solid #ddd;
+
+}
+ li.punto{
+    list-style: none;
+    width: 145px;
+    float: left;
+    margin-top: 10px;
+}
+ 
+.qwe{
+    padding: 51px;
+    margin-left: -15px;
+}
+
+#credit{
+  display: inline-block;
+  margin-top: 35px;
+}
+/******************** Slider*******************/
+
+
+  .slider {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  
+  animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+  height: 420px;
+}
+
+.slider img {
+  width: 100%;
+}
+
+@keyframes cambio {
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+  
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+  
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+  
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+  .nav-justified>li>a {
+    margin:0 -10px!important;
+  }
+
+/****************** Media Queries ****************/
+
+@media only screen and (max-width : 480px) {
+    img.logo {
+      width: 100%;
+      height: 90px;
+      }
+    .slider li {
+      height: auto;
+    }
+    .qwe{
+          margin-bottom: 10px;
+    }
+}
+@media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) {
+
+     .slider li {
+      height: auto;
+    }
+    }
