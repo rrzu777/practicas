@@ -89,6 +89,34 @@
     console.log(sumar4(...numeros));
     console.log(sumatodo(4,3,4,5,9,4));
 
+    function argu(a, b, c = 4){
+      return a * b / c;
+    }
+    console.log(argu(15,5))
+
+
+
+    function  spread(...hello){
+      return hello.reduce((a,b) => a + b);
+    }
+    console.log(spread(2,3,4,2,1,2))
+
+
+    //closure
+    function sumarw(){
+      let una = 1;
+      return function(){
+        una++;
+        console.log(una);
+      }
+    }
+
+    sumarw()()
+    sumarw()()
+    let vamoave = sumarw();
+    vamoave();
+    vamoave();
+    vamoave();
     </script>
 </body>
 </html>
